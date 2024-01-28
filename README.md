@@ -103,7 +103,20 @@ python3 BM25.py \
   --raw_data_path datasets \
   --preprocessed_data_path outputs/BM25 \
   --pyserini_index_path datasets/preprocessed/qrecc/pyserini_index \
-  --data_file {data file that contains rewrites to be evaluated, e.g., test_fused_ICL_epost.json}
+  --data_file {data file that contains rewrites to be evaluated, e.g., test_fused_ICL_post.json}
+```
+
+Dense retrieval
+```shell
+cd cs-shortcut
+python3 run_dense_search.py \
+  --task qrecc \
+  --split {train/dev/test} \
+  --read_by {rewrite type} \
+  --raw_data_path /home/user/InfoCQR/datasets \
+  --preprocessed_data_path /home/user/InfoCQR/outputs/BM25 \
+  --dense_index_path /home/user/InfoCQR/datasets/preprocessed/qrecc/dense_index \
+  --data_file {data file that contains rewrites to be evaluated, e.g., test_fused_ICL_post.json}
 ```
 
 
