@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DATA_PATH=/home/user/InfoCQR/datasets
+TASK=qrecc
 
 if [ -n "$DATA_PATH" ]; then
   :
