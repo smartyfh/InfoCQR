@@ -42,6 +42,7 @@ Download the passage collection
 ```shell
 cd cs-shortcut
 bash get_dataset.sh
+bash data_preprocessing.sh
 ```
 
 Build a Pyserini index of the passage collection to perform sparse retrieval
