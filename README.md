@@ -93,6 +93,19 @@ python3 post_processing.py \
   --rw_type {rewrite type, e.g., GPT_rewrite}
 ```
 
+### Perform Retrieval
+Sparse retrieval
+```shell
+python3 BM25.py \
+  --task qrecc \
+  --split {train/dev/test} \
+  --read_by {rewrite type} \
+  --raw_data_path datasets \
+  --preprocessed_data_path outputs/BM25 \
+  --pyserini_index_path datasets/preprocessed/qrecc/pyserini_index \
+  --data_file {data file that contains rewrites to be evaluated, e.g., test_fused_ICL_epost.json}
+```
+
 
 ## Acknowledgement 
 + [**cs-shortcut**](https://github.com/naver-ai/cs-shortcut/tree/main)
