@@ -52,7 +52,7 @@ python3 build_pyserini.py \
   --output_path /home/user/InfoCQR/datasets/preprocessed/qrecc
 ```
 
-Build a dense index based on [GTR](https://huggingface.co/sentence-transformers/gtr-t5-base) to perform dense retrieval
+Build a dense index of the passage collection based on [GTR](https://huggingface.co/sentence-transformers/gtr-t5-base) to perform dense retrieval
 ```shell
 python3 build_dense_index.py \
   --data_path=/home/user/InfoCQR/datasets/preprocessed \
