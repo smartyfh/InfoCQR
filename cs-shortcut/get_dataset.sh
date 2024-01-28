@@ -51,19 +51,19 @@ if [ $TASK == 'orconvqa' ]; then
   gzip -d $DATA_PATH/$TASK/all_blocks.txt.gz
   
 elif [ $TASK == 'qrecc' ]; then  
-  cp assets/$TASK/train.json $DATA_PATH/$TASK/train.json
-  cp assets/$TASK/dev.json $DATA_PATH/$TASK/dev.json
-  cp assets/$TASK/test.json $DATA_PATH/$TASK/test.json
-  cp assets/$TASK/qrels.txt $DATA_PATH/$TASK/qrels.txt
-  cp assets/$TASK/qrels_dev.txt $DATA_PATH/$TASK/qrels_dev.txt
-  cp assets/$TASK/test_question_types.json $DATA_PATH/$TASK/test_question_types.json
-  cp assets/$TASK/dev_blocks.jsonl.tar.gz $DATA_PATH/$TASK/dev_blocks.jsonl.tar.gz
+  # cp assets/$TASK/train.json $DATA_PATH/$TASK/train.json
+  # cp assets/$TASK/dev.json $DATA_PATH/$TASK/dev.json
+  # cp assets/$TASK/test.json $DATA_PATH/$TASK/test.json
+  # cp assets/$TASK/qrels.txt $DATA_PATH/$TASK/qrels.txt
+  # cp assets/$TASK/qrels_dev.txt $DATA_PATH/$TASK/qrels_dev.txt
+  # cp assets/$TASK/test_question_types.json $DATA_PATH/$TASK/test_question_types.json
+  # cp assets/$TASK/dev_blocks.jsonl.tar.gz $DATA_PATH/$TASK/dev_blocks.jsonl.tar.gz
   
   wget https://zenodo.org/record/5115890/files/passages.zip?download=1 -O $DATA_PATH/$TASK/passages.zip
    # unzip collections
   echo "Unzipping..."
   unzip $DATA_PATH/$TASK/passages.zip
-  tar -zxvf $DATA_PATH/$TASK/dev_blocks.jsonl.tar.gz
+  # tar -zxvf $DATA_PATH/$TASK/dev_blocks.jsonl.tar.gz
   
 else
   :
