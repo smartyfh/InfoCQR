@@ -29,7 +29,7 @@ def main(args):
     docs_per_split = num_docs // args.num_splits
     print(f"Number of passages per split: {docs_per_split}")
     
-    for i in range(5, args.num_splits):
+    for i in range(0, args.num_splits):
         st = i * docs_per_split
         ed = (i+1) * docs_per_split
         if i == args.num_splits - 1:
