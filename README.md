@@ -93,6 +93,10 @@ python3 post_processing.py \
   --rw_type {rewrite type, e.g., GPT_rewrite}
 ```
 
+
+## Acknowledgement 
++ [**cs-shortcut**](https://github.com/naver-ai/cs-shortcut/tree/main)
+
 ## Citation
 ```bibtex
 @inproceedings{ye-etal-2023-enhancing,
