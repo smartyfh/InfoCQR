@@ -44,6 +44,13 @@ cd cs-shortcut
 bash get_dataset.sh
 ```
 
+```shell
+python3 build_pyserini.py
+  --task qrecc \
+  --data_path /home/user/InfoCQR/datasets/qrecc 
+  --output_path /home/user/InfoCQR/datasets/preprocessed/qrecc
+```
+
 
 ## Citation
 ```bibtex
