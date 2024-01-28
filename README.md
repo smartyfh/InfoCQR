@@ -44,13 +44,29 @@ cd cs-shortcut
 bash get_dataset.sh
 ```
 
+Build a Pyserini index of the passage collection to perform sparse retrieval
 ```shell
-python3 build_pyserini.py
+python3 build_pyserini.py \
   --task qrecc \
-  --data_path /home/user/InfoCQR/datasets/qrecc 
+  --data_path /home/user/InfoCQR/datasets/qrecc \
   --output_path /home/user/InfoCQR/datasets/preprocessed/qrecc
 ```
 
+Build a dense index based on [GTR](https://huggingface.co/sentence-transformers/gtr-t5-base) to perform dense retrieval
+```shell
+python3 build_dense_index.py \
+  --data_path=/home/user/InfoCQR/datasets/preprocessed \
+  --output_path=/home/user/InfoCQR/datasets/preprocessed/qrecc/dense_index \
+  --index_batch_size={batch size}
+```
+or
+```shell
+python3 build_dense_index_multi_gpus.py \
+  --data_path=/home/user/InfoCQR/datasets/preprocessed \
+  --output_path=/home/user/InfoCQR/datasets/preprocessed/qrecc/dense_index \
+  --index_batch_size={batch size}
+```
+when multiple GPU cards are available.
 
 ## Citation
 ```bibtex
