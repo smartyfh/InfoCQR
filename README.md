@@ -69,6 +69,18 @@ python3 build_dense_index_multi_gpus.py \
 ```
 when multiple GPU cards are available.
 
+### Prompt ChatGPT to Generate Rewrites
+Since the first question does not have contextual information, we modify the first question of each conversation to be the human-rewritten query.
+```shell
+pthon3 dataset_cleaning.py -root_path datasets/qrecc
+```
+
+Prompt ChatGPT
+```shell
+python rewrite_chatgpt_{inctx/zsl/editor/self_editor}.py
+```
+
+
 ## Citation
 ```bibtex
 @inproceedings{ye-etal-2023-enhancing,
