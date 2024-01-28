@@ -35,8 +35,18 @@ We conduct experiments on the [QReCC](https://aclanthology.org/2021.naacl-main.4
 </p>
 
 
+## Usage
+
+### Data Preparation
+Download the passage collection
+```shell
+cd cs-shortcut
+bash get_dataset.sh
+```
+
+
 ## Citation
-```bibtext
+```bibtex
 @inproceedings{ye-etal-2023-enhancing,
     title = "Enhancing Conversational Search: Large Language Model-Aided Informative Query Rewriting",
     author = "Ye, Fanghua and Fang, Meng and Li, Shenghui and Yilmaz, Emine",
