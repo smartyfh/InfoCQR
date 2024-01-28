@@ -114,7 +114,7 @@ python3 run_dense_search.py \
   --split {train/dev/test} \
   --read_by {rewrite type} \
   --raw_data_path /home/user/InfoCQR/datasets \
-  --preprocessed_data_path /home/user/InfoCQR/outputs/BM25 \
+  --preprocessed_data_path /home/user/InfoCQR/outputs/DPR \
   --dense_index_path /home/user/InfoCQR/datasets/preprocessed/qrecc/dense_index \
   --data_file {data file that contains rewrites to be evaluated, e.g., test_fused_ICL_post.json}
 ```
