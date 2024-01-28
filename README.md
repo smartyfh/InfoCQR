@@ -26,3 +26,8 @@ Then, we propose to prompt LLMs as query rewriters and rewrite editors using wel
 </p>
 
 ## Results
+We conduct experiments on the [QReCC](https://aclanthology.org/2021.naacl-main.44/) dataset. We rely on passage retrieval performance to assess the usefulness of generated query rewrites.
+<p align="center">
+  <img src="assets/results.png" width="96%" />
+  <p align="center">Passage retrieval performance of sparse and dense retrievers with various query rewriting methods on the QReCC test set and its three subsets. The best results are shown in bold and the second-best results are underlined.</p>
+</p>
