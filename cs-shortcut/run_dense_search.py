@@ -90,7 +90,7 @@ if __name__ == "__main__":
     parser.add_argument('--preprocessed_data_path', type=str, default="/home/ye/CQR/outputs/DPR")
     parser.add_argument('--dense_index_path', type=str, default="/home/ye/CQR/datasets/preprocessed/qrecc/dense_index")
     parser.add_argument('--data_file', type=str, default=None)
-    parser.add_argument('--num_splits', type=int, default=6)
+    parser.add_argument('--num_splits', type=int, default=8)
     parser.add_argument('--top_k', type=int, default=100)
     args = parser.parse_args()
     
