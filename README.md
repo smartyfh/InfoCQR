@@ -31,3 +31,20 @@ We conduct experiments on the [QReCC](https://aclanthology.org/2021.naacl-main.4
   <img src="assets/results.png" width="96%" />
   <p align="center">Passage retrieval performance of sparse and dense retrievers with various query rewriting methods on the QReCC test set and its three subsets. The best results are shown in bold and the second-best results are underlined.</p>
 </p>
+
+
+## Citation
+```bibtext
+@inproceedings{ye-etal-2023-enhancing,
+    title = "Enhancing Conversational Search: Large Language Model-Aided Informative Query Rewriting",
+    author = "Ye, Fanghua and Fang, Meng and Li, Shenghui and Yilmaz, Emine",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2023",
+    month = dec,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-emnlp.398",
+    doi = "10.18653/v1/2023.findings-emnlp.398",
+    pages = "5985--6006"
+}
+```
