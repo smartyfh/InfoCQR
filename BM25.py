@@ -50,6 +50,14 @@ def read_qrecc_data(dataset, read_by="all", is_test=False):
         
     return examples
 
+def read_qrecc_data_model_pred(dataset):
+    examples = []
+    for did in tqdm(dataset.keys()):
+        new_did = "_".join(did.split("_")[-2:])
+        examples.append([new_did, dataset[did]['pred']])
+  
+    return examples
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -71,12 +79,26 @@ if __name__ == "__main__":
     indexer = SparseIndexer(args.pyserini_index_path)
     indexer.set_retriever(k_1, b)
 
+    qrels = json.load(open(os.path.join("datasets/qrecc", f"qrels_{args.split}.txt"), "r"))
+
     data = json.load(open(f"{args.raw_data_path}/{args.task}/{args.data_file}", "r", encoding="utf-8"))
-    raw_examples = read_qrecc_data(data, args.read_by)
+    if args.read_by == "model":
+        raw_examples = read_qrecc_data_model_pred(data)
+    else:
+        raw_examples = read_qrecc_data(data, args.read_by)
+    print(f'Total number of queries: {len(raw_examples)}')
 
     scores = {}
     for idx, line in enumerate(raw_examples):
         qid, q = line
+
+        no_rels = False
+        if args.split == "test" or args.split == "dev":
+            if list(qrels[qid].keys())[0] == '':
+                no_rels = True
+        if no_rels:
+            continue
+        
         if not q:
             scores[qid] = {}
             continue
