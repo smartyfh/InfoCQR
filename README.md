@@ -1,6 +1,6 @@
 # Enhancing Conversational Search: Large Language Model-Aided Informative Query Rewriting
 
-This [paper](https://aclanthology.org/2023.findings-emnlp.398.pdf) has been accepted at EMNLP Findings 2023.
+This [paper](https://aclanthology.org/2023.findings-emnlp.398.pdf) has been accepted to EMNLP Findings 2023.
 
 ## Introduction
 Query rewriting plays a vital role in enhancing conversational search by transforming context-dependent user queries into standalone forms. Existing approaches primarily leverage human-rewritten queries as labels to train query rewriting models. However, human rewrites may lack sufficient information for optimal retrieval performance. 
